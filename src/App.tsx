@@ -15,10 +15,10 @@ function App() {
   });
 
   return (
-    <div>
-      <div>
-        <div>
-          <h1>{`Todo List`}</h1>
+    <div className="container">
+      <div className="app-wrapper">
+        <div className="header">
+          <h1>{`To-Do List`}</h1>
         </div>
         <InsertItem items={items} setItems={setItems} />
         <ItemList items={items} setItems={setItems} />

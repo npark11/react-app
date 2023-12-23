@@ -25,11 +25,20 @@ const ItemList = ({ items, setItems }: Props) => {
     <ul>
       {items.map((data: Item) => {
         return (
-          <li key={data.itemId}>
+          <li
+            className={`list-item ${data.clear ? "complete" : ""}`}
+            key={data.itemId}
+          >
             <p>{data.itemName}</p>
             <div>
-              <button onClick={() => clickDelete(data)}>{`Delete`}</button>
-              <button onClick={() => clickComplete(data)}>{`Complete`}</button>
+              <button
+                className="button-delete"
+                onClick={() => clickDelete(data)}
+              >{`Delete`}</button>
+              <button
+                className="button-complete"
+                onClick={() => clickComplete(data)}
+              >{`Complete`}</button>
             </div>
           </li>
         );
