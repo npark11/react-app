@@ -13,7 +13,7 @@ const ItemList = ({ items, setItems }: Props) => {
   const clickComplete = (data: Item) => {
     setItems(
       items.map((item: Item) => {
-        if (item.itemId) {
+        if (item.itemId === data.itemId) {
           return { ...item, clear: !item.clear };
         }
         return item;
